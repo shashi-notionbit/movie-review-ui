@@ -14,9 +14,9 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   searchMovie(searchText: string): Observable<any> {
-    let params = new HttpParams();
-    params.append('api_key', this.apiKey);
-    params = params.append('query', searchText);
+    let params = new HttpParams()
+      .append('api_key', this.apiKey)
+      .append('query', searchText);
 
     return this.http.get(this.searchUrl, { params: params });
   }
