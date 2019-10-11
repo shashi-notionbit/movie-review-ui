@@ -9,6 +9,7 @@ import { MovieSearchEnvelope } from '../models/movieSearchEnvelope';
 export class MovieService {
 
   private searchUrl = "https://api.themoviedb.org/3/search/movie";
+  private upcomingMoviesUrl = "https://api.themoviedb.org/3/movie/upcoming";
   private apiKey = "073e84c439dd2308745b50c8fa81e4b4";
 
   constructor(private http: HttpClient) { }
@@ -19,5 +20,12 @@ export class MovieService {
       .append('query', searchText);
 
     return this.http.get(this.searchUrl, { params: params });
+  }
+
+  getUpcominghMovie(): Observable<any> {
+    let params = new HttpParams()
+      .append('api_key', this.apiKey)
+
+    return this.http.get(this.upcomingMoviesUrl, { params: params });
   }
 }

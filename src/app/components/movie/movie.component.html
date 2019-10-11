@@ -12,7 +12,7 @@
             <dd>{{movie.release_date | date: 'longDate' }}</dd>
             <dt>{{movie.overview}}</dt>
         </dl>
-        <div class="row">
+        <div class="row" *ngIf="showOptions">
             <div class="col-md-5 float-left">
                 <button class="btn btn-sm btn-info" [routerLink]="['movie-detail', movie.id]">
                     More Details (todo)

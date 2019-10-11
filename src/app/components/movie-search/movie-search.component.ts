@@ -11,6 +11,7 @@ import { MovieSearchModel } from 'src/app/models/movieSearchModel';
 export class MovieSearchComponent implements OnInit {
 
   searchText: string;
+  showOptions:boolean = true;
   movieSearchEnvelope: MovieSearchEnvelope = new MovieSearchEnvelope();
   movieSearchResults: MovieSearchModel[];
 

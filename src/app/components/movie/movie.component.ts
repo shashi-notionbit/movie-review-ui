@@ -7,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MovieComponent implements OnInit {
 
-  @Input() movie: any
+  @Input() movie: any;
+  @Input() showOptions:boolean;
   
   constructor() { }
 

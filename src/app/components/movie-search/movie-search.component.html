@@ -15,7 +15,7 @@
             <li class="col-md-6 d-flex align-items-stretch" *ngFor="let movie of movieSearchEnvelope.results">
                 <div class="card mb-2">
                     <div class="card-body">
-                        <app-movie [movie]="movie"></app-movie>
+                        <app-movie [movie]="movie" [showOptions]="showOptions"></app-movie>
                     </div>
                 </div>
             </li>
