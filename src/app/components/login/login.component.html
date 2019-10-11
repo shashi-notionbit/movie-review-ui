@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit()">
+    <h1>Login</h1>
+    <p>Please enter your logn details.</p>
+
+    <div class="form-group">
+      <label for="email">User Name:</label>
+      <input type="email" class="form-control" name="email" [(ngModel)]="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" name="password" [(ngModel)]="password">
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Login"/>
+
+    <p>Don't have an account <a routerLink="/registration">Register here</a>.</p>
+  </form>

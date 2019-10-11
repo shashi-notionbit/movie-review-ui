@@ -1,0 +1,24 @@
+<div>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Enter movie name" aria-label="Enter movie name"
+            aria-describedby="basic-addon2" [(ngModel)]="searchText">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" (click)="searchMovies()">Search</button>
+        </div>
+        <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" (click)="clearMovies()">Clear</button>
+            </div>
+    </div>
+
+    <div class="row">
+        <ul class="row list-unstyled">
+            <li class="col-md-6 d-flex align-items-stretch" *ngFor="let movie of movieSearchEnvelope.results">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <app-movie [movie]="movie"></app-movie>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
