@@ -1,10 +1,16 @@
 <div>
+    <div class="form-group">
+        <div class="col-md-12">
+            <input type="text" [(ngModel)]="filterText" class="form-control" placeholder="Filter by name" />
+        </div>
+    </div>
+
     <div class="row">
         <ul class="row list-unstyled">
             <li class="col-md-6 d-flex align-items-stretch" *ngFor="let movie of movieSearchEnvelope.results">
                 <div class="card mb-2">
                     <div class="card-body">
-                        <app-movie [movie]="movie" [showOptions]="showOptions"></app-movie> 
+                        <app-movie [movie]="movie" [showOptions]="showOptions"></app-movie>
                     </div>
                 </div>
             </li>

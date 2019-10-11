@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MovieSearchEnvelope } from 'src/app/models/movieSearchEnvelope';
 import { MovieSearchModel } from 'src/app/models/movieSearchModel';
 import { MovieService } from 'src/app/services/movie.service';
+import { MoviePipe } from 'src/app/pipes/movie.pipe';
 
 @Component({
   selector: 'app-upcoming-movies',
@@ -11,6 +12,7 @@ import { MovieService } from 'src/app/services/movie.service';
 export class UpcomingMoviesComponent implements OnInit {
 
   showOptions:boolean = false;
+  filterText:string;
   movieSearchEnvelope: MovieSearchEnvelope = new MovieSearchEnvelope();
   movieSearchResults: MovieSearchModel[];
   

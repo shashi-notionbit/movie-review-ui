@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 
 import { UpcomingMoviesComponent } from './components/upcoming-movies/upcoming-movies.component';
 import { MovieComponent } from './components/movie/movie.component';
+import { MoviePipe } from './pipes/movie.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MovieComponent } from './components/movie/movie.component';
     HomeComponent,
     UpcomingMoviesComponent,
     MovieComponent,
+    MoviePipe,
   ],
   imports: [
     BrowserModule,
