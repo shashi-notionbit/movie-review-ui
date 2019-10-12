@@ -10,7 +10,7 @@ export class MovieService {
 
   private searchUrl = "https://api.themoviedb.org/3/search/movie";
   private upcomingMoviesUrl = "https://api.themoviedb.org/3/movie/upcoming";
-  private apiKey = "073e84c439dd2308745b50c8fa81e4b4";
+  private apiKey = localStorage.getItem('moviedDbToken');
 
   constructor(private http: HttpClient) { }
 

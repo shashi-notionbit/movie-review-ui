@@ -10,8 +10,8 @@ import { LoginResponse } from '../models/loginResponse';
 })
 export class AuthService {
 
-  private registerUrl = "http;//localhost:3000/api/register";
-  private loginUrl = "http;//localhost:3000/api/login";
+  private registerUrl = "http://localhost:8000/api/register/";
+  private loginUrl = "http://localhost:8000/api/login/";
 
   constructor(private http:HttpClient) { }
 
@@ -19,14 +19,14 @@ export class AuthService {
     return false;
   }
 
-  loginUser(user:User):boolean {
-    if (user.email == 'qq@qq' && user.password == 'qq') {
-      localStorage.setItem('loggednIn', 'true');
-      return true;
-    } else {
-      return false;
-    }
-  }
+  // loginUser(user:User):boolean {
+  //   if (user.email == 'qq@qq' && user.password == 'qq') {
+  //     localStorage.setItem('loggednIn', 'true');
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 
   
   loginUser1(user:User):Observable<any> {
@@ -39,7 +39,7 @@ export class AuthService {
   }
 
   loggedIn():boolean {
-    return !!localStorage.getItem('loggednIn');
+    return !!localStorage.getItem('user');
   }
 
   // private handleError(error: HttpErrorResponse) {
