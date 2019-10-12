@@ -15,21 +15,11 @@ export class AuthService {
 
   constructor(private http:HttpClient) { }
 
-  registerUser(user:User):boolean {
-    return false;
+  registerUser(user:User):Observable<any> {
+    return this.http.post(this.registerUrl, user);;
   }
-
-  // loginUser(user:User):boolean {
-  //   if (user.email == 'qq@qq' && user.password == 'qq') {
-  //     localStorage.setItem('loggednIn', 'true');
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
-
   
-  loginUser1(user:User):Observable<any> {
+  loginUser(user:User):Observable<any> {
     return this.http.post(this.loginUrl, user);
   }
 

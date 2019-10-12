@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     user.password = this.password;
 
     // let res:boolean = this.authService.loginUser1(user)
-    this.authService.loginUser1(user)
+    this.authService.loginUser(user)
       .subscribe(data => {
         localStorage.setItem('user', JSON.stringify({
           'email': this.email,
